@@ -8,11 +8,127 @@
     <link rel="apple-touch-icon" href="https://img2.pic.in.th/pic/jjjb0c0a4bf2cf40c54.png" type="image/png"/> <!-- HomeScreen -->
 
 
+<style>
+  #header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 997;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: mix-blend-mode 0.3s ease;
+}
+  
+  #header .inner {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 26px 0;
+    mix-blend-mode: difference;
+}
 
+#header .header-wrapper {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+  
+  #header .header-left {
+    display: flex;
+    align-items: center;
+}
+  
+  #header.fixed {
+    position: fixed;
+}
+  
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial);
+    box-sizing: content-box
+}
+.button_container {
+    background-color: #fff;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 25px;
+    ;cursor: pointer;
+    z-index: 1002;
+    transition: opacity 0.25s ease;
+    border: 1px solid #000;
+    padding: 12px 25px;
+    border-radius: 100%;
+}
+  
+.button_container .opened {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+  .button_container.active .opened {
+    opacity: 0;
+}
+  .button_container span {
+    background: var(--borderColor01);
+    border: none;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 7px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 21px;
+}
+    .top_logo {
+        width: 170px;
+        top: 54%;
+    }
+
+    .top_logo .pc_logo {
+        display: none;
+    }
+
+    .top_logo .m_logo {
+        display: block;
+    }
+
+  
+</style>
+  
+<!--  #= id/ .= class -->
+
+    
     <body>
  
                 <h1>👾 OliveMonster</h1>
-<header id="header" class="">
+      
+<header id="header" class="fixed">
   
 <div id="topBanner" class="topBanner closed trans8">
   <div class="topBannerSwiper swiper-container swiper">
@@ -53,10 +169,10 @@
     
 ----------------------------------------------------------------------------------------------------------------------------------->
 <div class="pc_logo">
-  <a href="/" class="logo_black"><img src="/web/upload/category/editor/2025/02/28/bd72df70197291dd2381010da13d0f8c.png"></a><!-- PC -->
+  <a href="/" class="logo_black"><img src="https://secondmorning.co.kr/web/upload/category/editor/2025/02/28/bd72df70197291dd2381010da13d0f8c.png"></a><!-- PC -->
 </div>
 <div class="m_logo">
-  <a href="/" class="logo_black"><img src="/web/upload/category/editor/2025/02/28/509ca9c6a700f80c7651142de023b2ae.png"></a><!-- M  -->
+  <a href="/" class="logo_black"><img src="https://secondmorning.co.kr/web/upload/category/editor/2025/02/28/509ca9c6a700f80c7651142de023b2ae.png"></a><!-- M  -->
 </div>
 </div>
         <div class="cate-wrap">
