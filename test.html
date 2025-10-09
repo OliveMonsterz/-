@@ -93,6 +93,22 @@
                 <h1>👾 OliveMonster</h1>
                 <div>olivemonsterz@gmail.com</div>
 
+            <!-- SEARCH -->
+            <v-text-field
+              outlined
+              rounded
+              label="Search"
+              prepend-inner-icon="fa fa-search"
+              :append-icon="searchInput == '' ? '' : 'fa-solid fa-xmark'"
+              @click:append="clearSearch"
+              v-model="searchInput"
+              @input="onSearchChanged"
+              @blur="onSearchBlur"
+            >
+            </v-text-field>
+
+              
+
 <div class="v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--rounded">
   <div class="v-input__control">
     <div class="v-input__slot">
