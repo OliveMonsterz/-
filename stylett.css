@@ -1,5 +1,5 @@
 .header-bg {
-  background-image: url("/src/header.png");
+  background-image: url("https://img2.pic.in.th/pic/d0230fac0373f181db9c6ebe15e99f4e.jpeg");
   background-size: cover;
   background-position-x: center;
   background-position-y: 49%;
@@ -24,7 +24,7 @@
 
 .avatar {
   position: absolute;
-  background-image: url("https://i.pinimg.com/280x280_RS/c4/e4/fd/c4e4fd166f4c2d0de365a2a56baadd4c.jpg");
+  background-image: url("https://img2.pic.in.th/pic/OM.png");
   background-size: cover;
   background-position: center;
   height: 100px;
