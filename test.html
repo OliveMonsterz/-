@@ -66,11 +66,20 @@
 
   <!-- เชื่อมโยงไฟล์ CSS -->
   <link rel="stylesheet" href="./stylett.css" />
-  <link rel="stylesheet" href="./vuetify.min.css" />
+
   
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+    <script src="https://cdn.jsdelivr.net/gh/vuejs/vue@2.7.14/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/lib/util/colors.js"></script>
+
+  
+   <!-- ✅ Safe to include in <head> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> <!-- Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.x/css/materialdesignicons.min.css" rel="stylesheet">  <!-- Material Design Icons -->
+  <link href="https://cdn.jsdelivr.net/gh/vuetifyjs/vuetify@2.7.1/dist/vuetify.min.css" rel="stylesheet">  <!-- Vuetify CSS (จาก GitHub) -->
+
+
 
   <!-- Web Manifest (for PWA support, optional) -->
   <link rel="manifest" href="./manifest.json"> <!--https://olivemonsterz.github.io/-/manifest.json-->
@@ -81,6 +90,8 @@
 
 
   <body>
+      
+    
     <div id="app"><div data-app="true" class="v-application v-application--is-ltr theme--light" id="app"><div class="v-overlay theme--dark" style="z-index: 5;"><div class="v-overlay__scrim" style="opacity: 0; background-color: rgb(33, 33, 33); border-color: rgb(33, 33, 33);"></div></div><div class="v-application--wrap"><main class="v-main" data-booted="true" style="padding: 0px;">
         <div class="v-main__wrap">
             <div class="v-dialog__container"></div>
@@ -153,6 +164,37 @@
               
              
     <script src="./public.app.js"></script>
-  
+    <!-- ✅ Scripts should go just before closing </body> -->
+  <script src="https://cdn.jsdelivr.net/gh/vuejs/vue@2.7.14/dist/vue.min.js"></script> <!-- Vue.js (จาก GitHub) -->
+  <script src="https://cdn.jsdelivr.net/gh/vuetifyjs/vuetify@2.7.1/dist/vuetify.min.js"></script> <!-- Vuetify JS (จาก GitHub) -->
+
+  <!-- ✅ Use "type=module" and wait until DOM is loaded --> <!--Vuetifycolors.js(จาก GitHub)-->
+  <script type="module">
+    import colors from 'https://cdn.jsdelivr.net/gh/vuetifyjs/vuetify@2.7.1/packages/vuetify/lib/util/colors.js';  
+
+    window.addEventListener('DOMContentLoaded', () => {
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: {
+          buttonColor: colors.red.darken1
+        }
+      });
+    });
+  </script>
+
+   <!-- // ทำให้ Vue สามารถใช้ Vuetify ร่วมกับ colors
+    window.onload = () => {
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: {
+          buttonColor: colors.red.darken1 // ใช้สีจาก colors.js
+        }
+      });
+    };
+  </script> -->
+
+              
 
 </body></html>
